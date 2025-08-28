@@ -1,0 +1,18 @@
+{
+  "name": "daily-post",
+  "version": "1.0.0",
+  "description": "Mongo Express React Node GraphQL based simple social media like app",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "locally": "nodemon index.js"
+  },
+  "author": "Sandipan Chakraborty",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^5.0.0",
+    "dotenv": "^17.2.1",
+    "graphql": "^16.11.0",
+    "mongoose": "^8.18.0"
+  }
+}
