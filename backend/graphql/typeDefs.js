@@ -6,6 +6,10 @@ type Query{
     getPosts: PostsResult
 }
 
+type Mutation {
+    register(registerInput: InputRegister): RegistrationResult
+}
+
 type User {
     username: String,
     password: String,
@@ -30,6 +34,25 @@ type PostsResult {
     data: [Post]
 }
 
+input InputRegister {
+    username: String,
+    password: String,
+    confirmPassword: String,
+    email: String
+}
 
+type registrationOutput{
+    id: ID!,
+    email: String!,
+    token: String!,
+    username: String!,
+    createdAt: String!
+}
+
+type RegistrationResult {
+    message: String,
+    httpStatusCode: Int,
+    data: registrationOutput
+}
 
 `;

@@ -1,9 +1,9 @@
 import { model, Schema } from "mongoose";
 
 const userSchema = new Schema({
-  username: String,
+  username: { type: String, unique: true },
   password: String,
-  email: String,
+  email: { type: String, unique: true },
   createdAt: String,
 });
 
