@@ -1,0 +1,7 @@
+input CreatePostInput {
+  body: String!
+}
+
+input DeletePostInput {
+  id: ID!
+}

@@ -1,0 +1,11 @@
+type RegisterResponse {
+  success: Boolean!
+  httpStatusCode: Int!
+  body: UserAuthData
+}
+
+type LoginResponse {
+  success: Boolean!
+  httpStatusCode: Int!
+  body: UserAuthData
+}

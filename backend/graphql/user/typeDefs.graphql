@@ -1,0 +1,8 @@
+type Mutation {
+  login(loginInput: InputLogin!): LoginResponse!
+  register(registerInput: InputRegister!): RegisterResponse!
+}
+
+type Query {
+  ping: String
+}

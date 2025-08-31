@@ -1,0 +1,15 @@
+type GetAllPostsResponse {
+  success: Boolean!
+  httpStatusCode: Int!
+  body: [Post]
+}
+
+type CreatePostResponse {
+  success: Boolean!
+  httpStatusCode: Int!
+}
+
+type DeletePostResponse {
+  success: Boolean!
+  httpStatusCode: Int!
+}

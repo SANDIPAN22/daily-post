@@ -1,19 +1,18 @@
-import Post from "../models/post.js";
+import Post from "../../../models/post.js";
 
 export const getPosts = async () => {
   try {
-    const data = await Post.find();
+    const data = await Post.find().populate();
     return {
-      message: "success",
+      success: true,
       httpStatusCode: 200,
-      data,
+      body: data,
     };
   } catch (e) {
     console.error("Error occurred while fetching posts: ", e);
     return {
-      message: "Server is not feeling well at this moment. Come back later !",
+      success: false,
       httpStatusCode: 500,
-      data: [],
     };
   }
 };

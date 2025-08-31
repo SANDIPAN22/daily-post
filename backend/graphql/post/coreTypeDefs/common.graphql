@@ -1,0 +1,5 @@
+type Post {
+  body: String!
+  createdAt: String!
+  author: User!
+}

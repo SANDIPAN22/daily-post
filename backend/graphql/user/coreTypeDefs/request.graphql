@@ -1,0 +1,11 @@
+input InputRegister {
+  username: String!
+  password: String!
+  confirmPassword: String!
+  email: String!
+}
+
+input InputLogin {
+  email: String!
+  password: String!
+}

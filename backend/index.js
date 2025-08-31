@@ -1,14 +1,18 @@
 import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
-import { typeDefs } from "./graphql/typeDefs.js";
-import { resolvers } from "./graphql/resolvers.js";
+// import { typeDefs } from "./graphql/typeDefs.js";
+// import { resolvers } from "./graphql/resolvers.js";
+import { typeDefs, resolvers } from "./graphql/index.js";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 
 dotenv.config();
 
 // initiate server
-const server = new ApolloServer({ typeDefs, resolvers });
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+});
 
 // start db
 mongoose
@@ -18,6 +22,10 @@ mongoose
 
 // start graphql server
 const { url } = await startStandaloneServer(server, {
+  context: async ({ req, res }) => ({
+    req,
+    res,
+  }),
   listen: { port: process.env.PORT },
 });
 

@@ -1,0 +1,7 @@
+type Query {
+  getAllPosts: GetAllPostsResponse
+}
+type Mutation {
+  createPost(requestPayload: CreatePostInput): CreatePostResponse
+  deletePost(requestPayload: DeletePostInput): DeletePostResponse
+}

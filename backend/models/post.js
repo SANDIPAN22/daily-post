@@ -1,8 +1,7 @@
 import { Schema, model } from "mongoose";
 
 const postSchema = new Schema({
-  body: String,
-  username: String,
+  body: { type: String, required: true },
   createdAt: String,
   comments: [
     {
@@ -17,9 +16,10 @@ const postSchema = new Schema({
       createdAt: String,
     },
   ],
-  user: {
+  author: {
     type: Schema.Types.ObjectId,
     ref: "users",
+    required: true,
   },
 });
 
