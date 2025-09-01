@@ -1,5 +1,9 @@
 import { getUserById } from "../user/resolversHandlers/query.js";
-import { createPost, deletePost } from "./resolversHandlers/mutation.js";
+import {
+  createPost,
+  deletePost,
+  createComment,
+} from "./resolversHandlers/mutation.js";
 import { getPosts } from "./resolversHandlers/query.js";
 
 export const postResolvers = {
@@ -9,8 +13,12 @@ export const postResolvers = {
   Mutation: {
     createPost: createPost,
     deletePost: deletePost,
+    createComment: createComment,
   },
   Post: {
     author: getUserById,
+  },
+  Comment: {
+    username: getUserById,
   },
 };

@@ -13,3 +13,8 @@ type DeletePostResponse {
   success: Boolean!
   httpStatusCode: Int!
 }
+
+type CreateCommentResponse {
+  success: Boolean!
+  httpStatusCode: Int!
+}

@@ -4,4 +4,5 @@ type Query {
 type Mutation {
   createPost(requestPayload: CreatePostInput): CreatePostResponse
   deletePost(requestPayload: DeletePostInput): DeletePostResponse
+  createComment(requestPayload: CreateCommentInput): CreateCommentResponse
 }

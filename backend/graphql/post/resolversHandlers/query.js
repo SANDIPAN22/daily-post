@@ -2,7 +2,7 @@ import Post from "../../../models/post.js";
 
 export const getPosts = async () => {
   try {
-    const data = await Post.find().populate();
+    const data = await Post.find();
     return {
       success: true,
       httpStatusCode: 200,

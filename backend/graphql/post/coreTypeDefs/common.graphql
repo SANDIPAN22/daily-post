@@ -2,4 +2,13 @@ type Post {
   body: String!
   createdAt: String!
   author: User!
+  id: ID!
+  comments: [Comment]
+}
+
+type Comment {
+  id: ID!
+  createdAt: String!
+  username: User!
+  body: String!
 }

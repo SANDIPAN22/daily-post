@@ -5,3 +5,8 @@ input CreatePostInput {
 input DeletePostInput {
   id: ID!
 }
+
+input CreateCommentInput {
+  body: String!
+  postId: ID!
+}
